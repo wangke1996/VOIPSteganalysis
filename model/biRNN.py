@@ -5,7 +5,7 @@ from tensorflow.contrib import cudnn_rnn
 class biLSTM(object):
     def __init__(self, max_input_length, num_class, input_dim=3, hidden_layer_num=2, num_hidden=50, fc_num_hidden=64,
                  bi_direction=True, hidden_layer_num_bi=2, num_hidden_bi=50, use_attention=True, attention_size=20,
-                 dropout=0.5):
+                 dropout=0):
         self.bi_direction = bi_direction
         if self.bi_direction:
             self.num_hidden = num_hidden_bi
